@@ -1,0 +1,12 @@
+{
+  "name": "@screens",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.ts",
+  "files": [
+    "*"
+  ],
+  "author": "Djibril",
+  "license": "ISC"
+}
