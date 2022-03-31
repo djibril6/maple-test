@@ -12,16 +12,20 @@ type ColorName =
   | 'primary50'
   | 'secondary'
   | 'secondary50'
+  | 'warning'
+  | 'info'
   | 'black'
-  | 'white';
+  | 'white'
+  | 'gray'
+  | 'gray50';
 
 type SpaceName = 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
 
 const typography: Record<TextTypes, StyleProp<TextStyle>> = {
   header1: {
-    fontSize: 18,
-    fontWeight: '700',
-    lineHeight: 24,
+    fontSize: 32,
+    fontWeight: '400',
+    lineHeight: 40,
   },
   header2: {
     fontSize: 14,
@@ -30,7 +34,7 @@ const typography: Record<TextTypes, StyleProp<TextStyle>> = {
   },
   body1: {
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: '700',
     lineHeight: 24,
   },
   body2: {
@@ -54,8 +58,12 @@ const colors: Record<ColorName, string> = {
   primary50: '#d33749',
   secondary: '#27CFC9',
   secondary50: '#27cfc9bb',
+  warning: '#E0952B',
+  info: '#8863E0',
   black: '#000',
   white: '#fff',
+  gray: 'gray',
+  gray50: '#E6E6E6',
 };
 
 const spacing: Record<SpaceName, number> = {
@@ -72,5 +80,5 @@ export const theme = {
   colors,
   typography,
   spacing,
-  radius: 4,
+  radius: 20,
 };

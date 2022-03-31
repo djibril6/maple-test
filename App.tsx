@@ -33,7 +33,7 @@ export default function App() {
           <Stack.Screen name="root" component={TabContainer} />
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </>
   );
 }
