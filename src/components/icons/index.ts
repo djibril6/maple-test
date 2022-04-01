@@ -1,4 +1,4 @@
-export * from './Add';
-export * from './Profile';
-export * from './Search';
-export * from './Alert';
+export { AddIcon } from './Add';
+export { ProfileIcon } from './Profile';
+export { SearchIcon } from './Search';
+export { AlertIcon } from './Alert';

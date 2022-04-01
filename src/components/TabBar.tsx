@@ -1,7 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { theme } from '../modules';
-import { HomeScreen } from '../screens';
+import {
+  HomeScreen,
+  MyMapleScreen,
+  AnalyticsScreen,
+  StoresScreen,
+} from '../screens';
 import { EScreen } from '../types';
 import { AddIcon, ProfileIcon } from './icons';
 
@@ -13,9 +18,9 @@ type Route = {
 
 export const TAB_ROUTES: Route[] = [
   { name: EScreen.HOME, component: HomeScreen, icon: ProfileIcon },
-  { name: EScreen.MY_MAPLE, component: HomeScreen, icon: ProfileIcon },
-  { name: EScreen.STORES, component: HomeScreen, icon: ProfileIcon },
-  { name: EScreen.ANALYTICS, component: HomeScreen, icon: ProfileIcon },
+  { name: EScreen.MY_MAPLE, component: MyMapleScreen, icon: ProfileIcon },
+  { name: EScreen.STORES, component: StoresScreen, icon: ProfileIcon },
+  { name: EScreen.ANALYTICS, component: AnalyticsScreen, icon: ProfileIcon },
 ];
 
 export const TabBar = ({ state, descriptors, navigation }: any) => {

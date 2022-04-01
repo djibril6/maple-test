@@ -3,4 +3,6 @@ export enum EScreen {
   MY_MAPLE = 'My Maple',
   STORES = 'Stores',
   ANALYTICS = 'Analytics',
+  ACTIVITE = 'Activite',
+  ROOT = 'root',
 }

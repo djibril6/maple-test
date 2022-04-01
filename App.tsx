@@ -3,13 +3,18 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { TabBar } from './src/components';
+import { TabBar, TAB_ROUTES } from './src/components';
 import { EScreen } from './src/types';
-import { TAB_ROUTES } from './src/modules';
+import { ActiviteScreen } from './src/screens';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 const screenOptions = { headerShown: false };
+
+export const STACK_ROUTES = [
+  { name: EScreen.ROOT, component: TabContainer },
+  { name: EScreen.ACTIVITE, component: ActiviteScreen },
+];
 
 function TabContainer() {
   return (
@@ -29,8 +34,13 @@ export default function App() {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={screenOptions}>
-          <Stack.Screen name="root" component={TabContainer} />
+        <Stack.Navigator
+          screenOptions={screenOptions}
+          initialRouteName={EScreen.ROOT}
+        >
+          {STACK_ROUTES.map(({ name, component }) => (
+            <Stack.Screen key={name} name={name} component={component} />
+          ))}
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="light" />

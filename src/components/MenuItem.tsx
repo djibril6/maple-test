@@ -1,5 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  Dimensions,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from 'react-native';
 
 import { theme } from '../modules';
 
@@ -10,9 +16,14 @@ type PageProps = {
   value: number;
   icon: JSX.Element;
 };
-export const MenuItem: React.FC<PageProps> = ({ label, value, icon }) => {
+export const MenuItem: React.FC<PageProps & TouchableOpacityProps> = ({
+  label,
+  value,
+  icon,
+  ...props
+}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} {...props}>
       {icon}
       <Text
         style={[
@@ -25,7 +36,7 @@ export const MenuItem: React.FC<PageProps> = ({ label, value, icon }) => {
       <Text style={[{ color: theme.colors.gray }, theme.typography.body1]}>
         {value}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

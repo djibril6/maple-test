@@ -15,7 +15,7 @@ type PageProps = {
   icon: JSX.Element;
   style?: StyleProp<ViewStyle>;
 };
-export const MenuItemLine: React.FC<PageProps & TouchableOpacityProps> = ({
+export const ActivityItem: React.FC<PageProps & TouchableOpacityProps> = ({
   label,
   icon,
   style,
