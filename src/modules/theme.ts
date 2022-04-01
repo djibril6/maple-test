@@ -5,6 +5,7 @@ type TextTypes =
   | 'header2'
   | 'body1'
   | 'body2'
+  | 'body3'
   | 'placeholder'
   | 'button';
 type ColorName =
@@ -41,6 +42,11 @@ const typography: Record<TextTypes, StyleProp<TextStyle>> = {
     fontSize: 12,
     fontWeight: '500',
     lineHeight: 16,
+  },
+  body3: {
+    fontSize: 14,
+    fontWeight: '500',
+    lineHeight: 24,
   },
   placeholder: {
     fontSize: 14,
